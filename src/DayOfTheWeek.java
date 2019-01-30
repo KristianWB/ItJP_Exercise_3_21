@@ -13,6 +13,16 @@ public class DayOfTheWeek {
                 "Enter the month from 1 - 12: Where Marts is 3 and december is 12, january and february is 1 nd 2 of the previous: "
         );
         int m = input.nextInt();
+        
+        if (m <= 2) {
+            if (m == 1) {
+                year--;
+                m = 13;
+            } else {
+                year--;
+                m = 14;
+            }
+        }
 
         System.out.print(
                 "Enter the day of the month: "
